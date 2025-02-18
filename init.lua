@@ -1,3 +1,3 @@
-require("mrGoblin.core")
+require("MrLmao.core")
 
-require("mrGoblin.lazy")
+require("MrLmao.lazy")
