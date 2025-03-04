@@ -148,6 +148,15 @@ return {
           },
         })
       end,
+      ["clangd"] = function()
+        -- configure clangd language server
+        lspconfig["clangd"].setup({
+          capabilities = capabilities,
+          cmd = { "clangd", "--compile-commands-dir=build" },
+          filetypes = { "c", "cpp", "objc", "objcpp" },
+          root_dir = lspconfig.util.root_pattern("compile_commands.json", ".git"),
+        })
+      end,
     })
   end,
 }
