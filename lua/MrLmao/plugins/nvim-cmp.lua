@@ -32,12 +32,12 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ["˚"] = cmp.mapping.select_prev_item(), -- previous suggestion
-        ["∆"] = cmp.mapping.select_next_item(), -- next suggestion
-        ["∫"] = cmp.mapping.scroll_docs(-4), -- scroll docs up
-        ["ƒ"] = cmp.mapping.scroll_docs(4), -- scroll docs down
-        [" "] = cmp.mapping.complete(), -- show completion suggestions
-        ["´"] = cmp.mapping.abort(), -- close completion window
+        ["<M-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+        ["<M-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+        ["<M-u>"] = cmp.mapping.scroll_docs(-4), -- scroll docs up
+        ["<M-d>"] = cmp.mapping.scroll_docs(4), -- scroll docs down
+        ["<M-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+        ["<M-e>"] = cmp.mapping.abort(), -- close completion window
         ["<Tab>"] = cmp.mapping.confirm({ select = true }), -- confirm selection
       }),
       -- sources for autocompletion
