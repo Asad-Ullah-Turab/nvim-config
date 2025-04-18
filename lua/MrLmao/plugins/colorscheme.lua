@@ -58,6 +58,6 @@ return {
     })
 
     -- Then set the colorscheme
-    vim.cmd("colorscheme night-owl")
+    -- vim.cmd("colorscheme night-owl")
   end,
 }
