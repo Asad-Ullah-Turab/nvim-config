@@ -21,7 +21,7 @@ This repository contains my custom Neovim configuration, designed for a modern a
 
 1. Clone this repository into your Neovim configuration directory:
    ```bash
-   git clone <repository-url> ~/.config/nvim
+   git clone https://github.com/Asad-Ullah-Turab/nvim-config.git ~/.config/nvim
    ```
 2. Open Neovim, and lazy.nvim will automatically install itself and the configured plugins.
 3. Restart Neovim to apply the configuration.
