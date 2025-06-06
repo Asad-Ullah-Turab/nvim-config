@@ -40,7 +40,9 @@ return {
         "jdtls",
         "sqlls",
         "clangd",
+        "markdown_oxide",
       },
+      automatic_installation = true,
     })
 
     mason_tool_installer.setup({
