@@ -21,6 +21,7 @@ return {
 
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+
       callback = function(ev)
         local opts = { buffer = ev.buf, silent = true }
         local keymap = vim.keymap
@@ -71,6 +72,17 @@ return {
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
+
+    vim.diagnostic.config({
+      virtual_text = {
+        prefix = "●",
+        source = "always",
+        spacing = 2, -- padding between code and text
+      },
+      signs = true,
+      underline = true,
+      update_in_insert = false,
+    })
 
     -- Now use `vim.lsp.config()` to configure individual servers
 
