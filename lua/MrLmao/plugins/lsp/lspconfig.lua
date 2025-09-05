@@ -82,6 +82,7 @@ return {
       signs = true,
       underline = true,
       update_in_insert = false,
+      float = { border = "rounded" },
     })
 
     -- Now use `vim.lsp.config()` to configure individual servers
