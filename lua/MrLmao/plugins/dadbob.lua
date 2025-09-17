@@ -16,6 +16,6 @@ return {
     vim.g.db_ui_use_nerd_fonts = 1
 
     -- custom keymaps
-    vim.keymap.set("n", "<leader>db", ":DBUIToggle<CR>", { desc = "Toggle DBUI" })
+    vim.keymap.set("n", "<leader>u", ":DBUIToggle<CR>", { desc = "Toggle DBUI" })
   end,
 }
