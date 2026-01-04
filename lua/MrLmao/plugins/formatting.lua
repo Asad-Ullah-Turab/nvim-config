@@ -23,6 +23,11 @@ return {
         cpp = { "clang-format" },
         sql = { "pg_format" },
       },
+      formatters = {
+        ["clang-format"] = {
+          prepend_args = { "--style={IndentWidth: 4, TabWidth: 4, UseTab: Never}" },
+        },
+      },
       format_on_save = {
         lsp_fallback = true,
         async = false,
