@@ -1,13 +1,26 @@
 return {
   "kawre/leetcode.nvim",
-  build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
+  build = ":TSUpdate html",
   dependencies = {
     "nvim-telescope/telescope.nvim",
-    -- "ibhagwan/fzf-lua",
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
   },
   opts = {
-    -- configuration goes here
+    -- The key must be "injection", not "injector"
+    injector = {
+      ["cpp"] = {
+        before = {
+          "#include <bits/stdc++.h>",
+          "using namespace std;",
+        },
+        after = {
+          "int main() {",
+          "    // local testing code here",
+          "    return 0;",
+          "}",
+        },
+      },
+    },
   },
 }

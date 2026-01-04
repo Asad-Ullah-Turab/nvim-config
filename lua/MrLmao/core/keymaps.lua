@@ -48,6 +48,20 @@ keymap.set("n", "<leader>fc", ":<cmd>Telescope grep_string<cr>")
 keymap.set("n", "<leader>fb", ":<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fh", ":<cmd>Telescope help_tags<cr>")
 
+-- leetcode.nvim
+keymap.set("n", "<leader>lr", "<cmd>Leet run<cr>")
+keymap.set("n", "<leader>ls", "<cmd>Leet submit<cr>")
+
+-- Local Test Keybind for LeetCode
+vim.keymap.set("n", "<leader>ll", function()
+  vim.cmd("silent! write")
+  local file = vim.fn.expand("%")
+  local output = vim.fn.expand("%:p:h") .. "/out"
+  local cmd = string.format("g++ -std=c++17 '%s' -o '%s' && '%s'", file, output, output)
+  vim.cmd("botright split | term " .. cmd)
+  vim.cmd("startinsert")
+end, { desc = "Run LeetCode C++ locally" })
+
 -- Keymaps for inserting multiple lines below
 keymap.set("n", "2o", "o<Esc>o", { noremap = true, silent = true })
 keymap.set("n", "3o", "o<Esc>o<Esc>o", { noremap = true, silent = true })
